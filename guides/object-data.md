@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Object data
-intro: This page explains how the game stores and parses object data. This is an advanced guide for mod developers.
+title: Object and weapons data
+intro: This page explains how the game stores and parses object and weapons data. This is an advanced guide for mod developers.
 ---
 
 ## Reading the raw data
 
 ### Source
-Objects are stored in `Content\Data\ObjectInformation.xnb`, which can be unpacked using
-[XNB Extract by Drogean](http://community.playstarbound.com/threads/modding-guides-and-general-modding-discussion-redux.109131/).
+Objects are stored in `Content\Data\ObjectInformation.xnb` and weapons are stored in `Content\Data\weapons.xnb`, which can be unpacked using [XNB Extract by Drogean](http://community.playstarbound.com/threads/modding-guides-and-general-modding-discussion-redux.109131/).
 Here's the raw data (as of 1.1.1) for reference:
 
+### Objects
 ```yaml
 content:  #!Dictionary<Int32,String>
     0: "Weeds/0/-1/Basic/A bunch of obnoxious weeds." #!String
@@ -594,3 +594,126 @@ index | field                   | example value
 4     | description             | _Builds a nest on the underside of glaciers._
 
 Some entries have more fields, but those don't seem to be used (needs to be investigated further).
+
+
+### Weapons
+```yaml
+content:  #!Dictionary<Int32,String>
+    0: "Rusty Sword" #!String
+    1: "Silver Saber" #!String
+    2: "Dark Sword" #!String
+    3: "Holy Blade" #!String
+    4: "Galaxy Sword" #!String
+    5: "Bone Sword" #!String
+    6: "Iron Edge" #!String
+    7: "Templar's Blade" #!String
+    8: "Obsidian Edge" #!String
+    9: "Lava Katana" #!String
+    10: "Claymore" #!String
+    11: "Steel Smallsword" #!String
+    12: "Wooden Blade" #!String
+    13: "Insect Head" #!String
+    14: "Neptune's Glaive" #!String
+    15: "Forest Sword" #!String
+    16: "Carving Knife" #!String
+    17: "Iron Dirk" #!String
+    18: "Burglar's Shank" #!String
+    19: "Shadow Dagger" #!String
+    20: "Elf Blade" #!String
+    21: "Crystal Dagger" #!String
+    22: "Wind Spire" #!String
+    23: "Galaxy Dagger" #!String
+    24: "Wood Club" #!String
+    25: "Alex's Bat" #!String
+    26: "Lead Rod" #!String
+    27: "Wood Mallet" #!String
+    28: "The Slammer" #!String
+    29: "Galaxy Hammer" #!String
+    30: "Sam's Old Guitar" #!String
+    31: "Femur" #!String
+    32: "Slingshot" #!String
+    33: "Master Slingshot" #!String
+    34: "Galaxy Slingshot" #!String
+    35: "Elliott's Pencil" #!String
+    36: "Maru's Wrench" #!String
+    37: "Harvey's Mallet" #!String
+    38: "Penny's Fryer" #!String
+    39: "Leah's Whittler" #!String
+    40: "Abby's Planchette" #!String
+    41: "Seb's Lost Mace" #!String
+    42: "Haley's Iron" #!String
+    43: "Pirate's Sword" #!String
+    44: "Cutlass" #!String
+    45: "Wicked Kris" #!String
+    46: "Kudgel" #!String
+    47: "Scythe" #!String
+    48: "Yeti Tooth" #!String
+    49: "Rapier" #!String
+    50: "Steel Falchion" #!String
+    51: "Broken Trident" #!String
+    52: "Tempered Broadsword" #!String
+    53: "Iron Spear" #!String
+    54: "Caveman Club" #!String
+    55: "Bone Club" #!String
+    56: "Spiked Club" #!String
+    57: "Wooden Mallet" #!String
+    58: "Gemmed Hammer" #!String
+    59: "Iridium Warhammer" #!String
+    60: "Steak Knife" #!String
+    61: "Generic Dagger" #!String
+    62: "Assassin's Dirk" #!String
+    63: "Coldsteel Dagger" #!String
+    64: "Shadow Dirk" #!String
+    65: "Druid's Knife" #!String
+    66: "Crystalline Dagger" #!String
+    67: "Iridium Dagger" #!String
+    68: "Halberd" #!String
+    69: "Dwarven Axe" #!String
+    70: "Bone Axe" #!String
+    71: "Earth Axe" #!String
+    72: "Glacial Battleaxe" #!String
+    73: "Solar Axe" #!String
+    74: "Adorable Battleaxe" #!String
+    75: "Iridium Battleaxe" #!String
+    76: "Scepter of Flame" #!String
+    77: "Scepter of Icefire" #!String
+    78: "Scepter of Storms" #!String
+    79: "Mantible" #!String
+    80: "Druid's Sword" #!String
+    81: "Necromancer's Blade" #!String
+    82: "Butterfly Sword" #!String
+    83: "Bloody Kris" #!String
+    84: "Scimitar" #!String
+    85: "Noble Broadsword" #!String
+    86: "Noble Rapier" #!String
+    87: "Sword of the Knight" #!String
+    88: "Amber Sword" #!String
+    89: "Dragon's Fang" #!String
+    90: "Plasma Blade" #!String
+    91: "Buster Sword" #!String
+    92: "Sword of Hearts" #!String
+    93: "Nebula Blade" #!String
+    94: "Phantasm Sword" #!String
+    95: "Demonic War Blade" #!String
+    96: "Glacial Cutlass" #!String
+    97: "Chainsaw" #!String
+    98: "Sword of Yoba" #!String
+    99: "Coldfire" #!String
+    100: "Poseidon's Wrath" #!String
+    101: "Solaris Katana" #!String
+    102: "Solaris Broadsword" #!String
+    103: "Angelic Fury" #!String
+    104: "Master Sword" #!String
+    105: "Energy Sword" #!String
+    106: "Soul Edge" #!String
+    107: "Feng Huo Lun" #!String
+    108: "Hook Sword" #!String
+    109: "Pudao" #!String
+    110: "Hu Die Dao" #!String
+    111: "Khopesh" #!String
+    112: "Wooden Staff" #!String
+    113: "Mace" #!String
+    114: "Robin's Axe" #!String
+    115: "Abigail's Sword" #!String
+    116: "Energy Saber" #!String
+```
